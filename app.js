@@ -28,7 +28,7 @@ function updateSelectedCount() {
 function populateUI() {
   const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
   console.log(selectedSeats);
-  if (selectedSeats.length > 0) {
+  if (selectedSeats !== null && selectedSeats.length > 0) {
     seats.forEach((seat, index) => {
       if (selectedSeats.indexOf(index) > -1) {
         seat.classList.add("selected");
